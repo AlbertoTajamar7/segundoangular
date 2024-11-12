@@ -1,0 +1,23 @@
+<div>
+    <form action="">
+        <label for="">Introduce un Numero</label>
+        <input type="number" name="cajaNumero" #cajaNumero="ngModel" [(ngModel)]="numero">
+        <button (click)="generarTabla()">Enviar</button>   
+    </form>
+    <table *ngIf="numeros.length > 0">
+        <thead>
+            <tr>
+                <th>operacion</th>
+                <th>resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let num of numeros; let i = index">
+                <td>{{numero}} * {{i+1}}</td>
+                <td>{{num}}</td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>
